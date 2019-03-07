@@ -34,8 +34,6 @@ app.post('/register', register.handleRegister(db,bcrypt));
 app.get('/profile/:id', profile.handleProfile(db));
 app.put('/image', image.handleImage(db));
 app.post('/imageurl', image.handleApiCall(db));
-//test 
-app.delete('/profile/:id', profile.handleProfileDelete(db))
 
 app.listen(process.env.PORT || 3000, ()=>{
     console.log(`app is running on port ${process.env.PORT}`);
