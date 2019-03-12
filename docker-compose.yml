@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  #backend
+  face-recognition-api:
+    container_name: backend
+    build: ./
+    command: npm start
+    working_dir: /usr/src/face-recognition-api
+    volumes: 
+      - ./:/usr/src/face-recognition-api:rw
+    ports:
+      - "3000:3000"
+    environment: 
+      PORT: 3000
+      POSTGRES_URI: postgres://ela:secret@postgres:5432/smart-brain-docker
+
+  #postgres
+  postgres:
+    environment:
+      POSTGRES_USER: ela
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: smart-brain-docker
+      POSTGRES_HOST: postgres
+    build: ./postgres
+    ports:
+      - "5431:5432"

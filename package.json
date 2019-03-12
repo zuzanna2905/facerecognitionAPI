@@ -8,7 +8,7 @@
     "npm": "4.6.1"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon -L server.js",
     "test": "mocha --timeout 10000"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "chai-http": "^4.2.1",
     "jest": "^24.1.0",
     "mocha": "^6.0.2",
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.10"
   },
   "dependencies": {
