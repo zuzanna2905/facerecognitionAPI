@@ -28,6 +28,7 @@ app.get('/', (req,res)=>{res.send('it is working')});
 app.post('/signin', signin.handleSignin(db,bcrypt));
 app.post('/register', register.handleRegister(db,bcrypt));
 app.get('/profile/:id', profile.handleProfile(db));
+app.post('/profile/:id', profile.handleProfileUpdate(db))
 app.put('/image', image.handleImage(db));
 app.post('/imageurl', image.handleApiCall(db));
 
