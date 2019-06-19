@@ -8,6 +8,8 @@ const handleRegister = ( db, bcrypt) => (req, res) =>{
         id: 1,
         email: email,
         name: name,
+        age: 25,
+        pet: 'dragon',
         joined: new Date()
     })
     // db.transaction(trx => {

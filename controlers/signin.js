@@ -9,6 +9,8 @@ const handleSignin = (db, bcrypt) => (req, res) =>{
         email: email,
         name: 'jon',
         entries: 3,
+        age: 25,
+        pet: 'dragon',
         joined: new Date()
     })
     // db.select('email', 'hash').from('login')
