@@ -9,16 +9,17 @@ const signin = require('./controlers/signin');
 const profile = require('./controlers/profile');
 const image = require('./controlers/image');
 
-const db = knex({
-    client: 'pg',
-    connection: {
-        host : '127.0.0.1',
-        user : 'susan',
-        password : 'test',
-        database : 'smartbrain'
-    }
-});
+// const db = knex({
+//     client: 'pg',
+//     connection: {
+//         host : '127.0.0.1',
+//         user : 'susan',
+//         password : 'test',
+//         database : 'smartbrain'
+//     }
+// });
 
+const db = ''
 const app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
